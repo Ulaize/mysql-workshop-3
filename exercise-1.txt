@@ -1,0 +1,157 @@
+mysql> CREATE DATABASE decodemtl_addressbook;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SHOW DATABASES;
++-----------------------+
+| Database              |
++-----------------------+
+| information_schema    |
+| c9                    |
+| decodemtl_addressbook |
+| mysql                 |
+| performance_schema    |
++-----------------------+
+5 rows in set (0.00 sec)
+
+
+mysql> CREATE TABLE Account( id int NOT NULL AUTO_INCREMENT, PRIMARY KEY (id) );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> SHOW TABLES;
++---------------------------------+
+| Tables_in_decodemtl_addressbook |
++---------------------------------+
+| Account                         |
++---------------------------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE TABLE AddressBook( id int NOT NULL AUTO_INCREMENT, PRIMARY KEY (id) );
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SHOW TABLES;
++---------------------------------+
+| Tables_in_decodemtl_addressbook |
++---------------------------------+
+| Account                         |
+| AddressBook                     |
++---------------------------------+
+2 rows in set (0.00 sec)
+
+mysql> CREATE TABLE Entry( id int NOT NULL AUTO_INCREMENT, PRIMARY KEY (id) );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> SHOW TABLES;
++---------------------------------+
+| Tables_in_decodemtl_addressbook |
++---------------------------------+
+| Account                         |
+| AddressBook                     |
+| Entry                           |
++---------------------------------+
+3 rows in set (0.00 sec)
+
+mysql> CREATE TABLE Phone( id int NOT NULL AUTO_INCREMENT, PRIMARY KEY (id) );
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> CREATE TABLE Email( id int NOT NULL AUTO_INCREMENT, PRIMARY KEY (id) );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> CREATE TABLE Address( id int NOT NULL AUTO_INCREMENT, PRIMARY KEY (id) );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> SHOW TABLES;
++---------------------------------+
+| Tables_in_decodemtl_addressbook |
++---------------------------------+
+| Account                         |
+| Address                         |
+| AddressBook                     |
+| Email                           |
+| Entry                           |
+| Phone                           |
++---------------------------------+
+6 rows in set (0.00 sec)
+
+mysql> DESCRIBE Account;
++-------+---------+------+-----+---------+----------------+
+| Field | Type    | Null | Key | Default | Extra          |
++-------+---------+------+-----+---------+----------------+
+| id    | int(11) | NO   | PRI | NULL    | auto_increment |
++-------+---------+------+-----+---------+----------------+
+1 row in set (0.00 sec)
+
+mysql> ALTER TABLE Entry ADD COLUMN type ENUM('phone','address','email');                                                                                      
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE Entry;
++-------+---------------------------------+------+-----+---------+----------------+
+| Field | Type                            | Null | Key | Default | Extra          |
++-------+---------------------------------+------+-----+---------+----------------+
+| id    | int(11)                         | NO   | PRI | NULL    | auto_increment |
+| type  | enum('phone','address','email') | YES  |     | NULL    |                |
++-------+---------------------------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> ALTER TABLE Address ADD COLUMN type ENUM('home','work','other');                                                                                   
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE Account;
++-------+---------+------+-----+---------+----------------+
+| Field | Type    | Null | Key | Default | Extra          |
++-------+---------+------+-----+---------+----------------+
+| id    | int(11) | NO   | PRI | NULL    | auto_increment |
++-------+---------+------+-----+---------+----------------+
+1 row in set (0.00 sec)
+
+mysql> DESCRIBE Address;
++-------+-----------------------------+------+-----+---------+----------------+
+| Field | Type                        | Null | Key | Default | Extra          |
++-------+-----------------------------+------+-----+---------+----------------+
+| id    | int(11)                     | NO   | PRI | NULL    | auto_increment |
+| type  | enum('home','work','other') | YES  |     | NULL    |                |
++-------+-----------------------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> ALTER TABLE Email ADD COLUMN type ENUM('home','work','other');                                                                                          
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE Email;
++-------+-----------------------------+------+-----+---------+----------------+
+| Field | Type                        | Null | Key | Default | Extra          |
++-------+-----------------------------+------+-----+---------+----------------+
+| id    | int(11)                     | NO   | PRI | NULL    | auto_increment |
+| type  | enum('home','work','other') | YES  |     | NULL    |                |
++-------+-----------------------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> ALTER TABLE Phone ADD COLUMN type ENUM('home','work','other');                                                                                          
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE Phone;                                                                                                                                         
++-------+-----------------------------+------+-----+---------+----------------+
+| Field | Type                        | Null | Key | Default | Extra          |
++-------+-----------------------------+------+-----+---------+----------------+
+| id    | int(11)                     | NO   | PRI | NULL    | auto_increment |
+| type  | enum('home','work','other') | YES  |     | NULL    |                |
++-------+-----------------------------+------+-----+---------+----------------+
+2 rows in set (0.01 sec)
+
+mysql> ALTER TABLE Phone ADD COLUMN subtype ENUM('landline','cellular','fax');                                                                            
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE Phone;
++---------+-----------------------------------+------+-----+---------+----------------+
+| Field   | Type                              | Null | Key | Default | Extra          |
++---------+-----------------------------------+------+-----+---------+----------------+
+| id      | int(11)                           | NO   | PRI | NULL    | auto_increment |
+| type    | enum('home','work','other')       | YES  |     | NULL    |                |
+| subtype | enum('landline','cellular','fax') | YES  |     | NULL    |                |
++---------+-----------------------------------+------+-----+---------+----------------+
+3 rows in set (0.01 sec)
+
+mysql> 

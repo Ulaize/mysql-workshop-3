@@ -1,0 +1,60 @@
+
+mysql> SELECT SUBSTRING_INDEX(ElectronicMail.content,'@',-1) FROM ElectronicMail;                                                                              
++------------------------------------------------+
+| SUBSTRING_INDEX(ElectronicMail.content,'@',-1) |
++------------------------------------------------+
+| dictumplacerat.com                             |
+| magnaetipsum.org                               |
+| loremutaliquam.com                             |
+| semperdui.com                                  |
+| risusNuncac.ca                                 |
+| rutrum.net                                     |
+| commodohendrerit.co.uk                         |
+| cursus.co.uk                                   |
+| arcu.com                                       |
+| necmauris.edu                                  |
+| ultricesiaculis.ca                             |
+| Etiam.co.uk                                    |
+| tellusAeneanegestas.co.uk                      |
+| elementumategestas.ca                          |
+| molestieSedid.net                              |
+| libero.org                                     |
+| pulvinararcuet.net                             |
+| dolorQuisque.net                               |
+| utsemNulla.org                                 |
+| elementumlorem.net                             |
+| mollis.com                                     |
+| Phasellusornare.net                            |
+| aodiosemper.com                                |
+| lectusrutrum.edu                               |
+| velit.net                                      |
+| acturpisegestas.net                            |
+| Craspellentesque.com                           |
+| inlobortis.com                                 |
+| CurabiturmassaVestibulum.edu                   |
+| quisdiam.ca                                    |
+| nonloremvitae.net                              |
+| dolorquamelementum.edu                         |
+| quisaccumsanconvallis.edu                      |
+| tellus.com                                     |
+| egestas.edu                                    |
+| quisturpis.edu                                 |
+| enimMaurisquis.com                             |
+| ategestasa.net                                 |
+| mollis.org                                     |
+| habitant.com                                   |
+| Curabitur.net                                  |
+| Nuncacsem.net                                  |
+| natoque.ca                                     |
+| elementumpurus.ca                              |
+| Praesentinterdumligula.org                     |
+| adipiscingligula.org                           |
+| Praesent.ca                                    |
+| etcommodo.com                                  |
+| sedduiFusce.edu                                |
+| nisl.org                                       |
+| tellusimperdietnon.net                         |
+| sapienimperdiet.com                            |
+| bibendum.co.uk                                 |
++------------------------------------------------+
+2300 rows in set (0.00 sec)

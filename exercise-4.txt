@@ -1,0 +1,36 @@
+mysql> SELECT Entry.firstName
+    -> FROM Entry
+    -> JOIN Entry ON Entry.addressBookId=AddressBook.id
+| Melanie     |
+| Driscoll    |
+| Gareth      |
+| Colt        |
+| Martha      |
+| Sierra      |
+| Nita        |
+| Celeste     |
+| Kathleen    |
+| Samuel      |
+| Aaron       |
+| Cheyenne    |
+| Brett       |
+| Rebekah     |
++-------------+
+65 rows in set (0.21 sec)
+
+
+mysql> SELECT Entry.firstName
+    -> FROM Entry
+    -> JOIN Entry ON Entry.addressBookId=AddressBook.id
+    
+    
+    SELECT
++    -> CONCAT(
++    -> UPPER (SUBSTRING((Entry.firstName), 1, 1)),
++    -> LOWER (SUBSTRING((Entry.firstName), 2, LENGTH(Entry.firstName)-1)),
++    -> UPPER (SUBSTRING((Entry.firstName), LENGTH(Entry.firstName))) ) AS names
+
+mysql> SELECT CONCAT(UPPER(SUBSTRING((Entry.firstName),1,1)),LOWER(SUBSTRING((Entry.firstName),2,LENGTH(Entry.firstName)-1)),UPPER(SUBSTRING(Entry.firstName),LENGTH(Entry.firstName))) FROM Entry JOIN AddressBook ON Entry.addressBookId=AddressBook.id WHERE AddressBook.name="Pharetra Ut Limited";
+
+It doesnt work :( But I am no longer able to see parentheses. My brain just wont do it right now so I am moving on to the next one
+

@@ -1,0 +1,53 @@
+mysql> SELECT Entry.firstName, Entry.lastName
+    -> FROM Entry
+    -> WHERE birthday<'%21:00:00' AND birthday>'%20:00:00' AND birthday NOT LIKE '%-02-%';
+Empty set, 3 warnings (0.01 sec)
+
+| Lisandra    | Guzman      |
+| Lynn        | Lynch       |
+| Irene       | Shannon     |
+| Portia      | Dominguez   |
+| Walker      | Leonard     |
+| Megan       | Steele      |
+| Reece       | Washington  |
+| Rosalyn     | Buckley     |
+| Germane     | Charles     |
+| Megan       | Santana     |
+| Nathaniel   | Warren      |
+| Octavia     | Vazquez     |
+| Cheyenne    | Oneil       |
+| Caldwell    | Webster     |
+| Gay         | Bennett     |
+| Caleb       | Lowery      |
+| Clayton     | Christian   |
+| Octavia     | Crawford    |
+| Zeph        | Bates       |
+| Jescie      | Peterson    |
+| Charde      | Solis       |
+| Zia         | Mayo        |
+| Leah        | Donaldson   |
+| Shelly      | Calderon    |
+| Damon       | Barlow      |
+| Kitra       | Melton      |
+| Brett       | Navarro     |
+| Benedict    | Torres      |
+| Matthew     | Butler      |
+| Josephine   | Grant       |
+| Yen         | Brennan     |
+| Jolie       | Mccarty     |
+| Amir        | Deleon      |
+| Calista     | Rocha       |
+| Oren        | Pollard     |
+| Rebekah     | Guy         |
+| Freya       | Salinas     |
+| Judith      | Nunez       |
+| Quinlan     | Tucker      |
+| Chiquita    | Shannon     |
+| Lee         | Roman       |
+| Daria       | Jacobson    |
+| Serena      | Ford        |
+| Raya        | Byers       |
++-------------+-------------+
+5615 rows in set, 3 warnings (0.00 sec)
+
+mysql> 

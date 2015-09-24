@@ -1,0 +1,57 @@
+mysql> SELECT Address.city, Address.country
+    -> FROM Address
+    -> WHERE Address.country='Canada'
+    -> OR country='Austria'
+    -> OR country='Ireland'
+    -> OR country='Japan';
++----------------+---------+
+| city           | country |
++----------------+---------+
+| Dubbo          | Austria |
+| Jackson        | Ireland |
+| Tauranga       | Austria |
+| Rzeszów        | Japan   |
+| Cartago        | Ireland |
+| Cagnes-sur-Mer | Ireland |
+| Ceyhan         | Austria |
+| Houston        | Japan   |
+| Galway         | Ireland |
+| Pietraroja     | Canada  |
+| Moulins        | Canada  |
+| Anápolis       | Canada  |
+| Assen          | Ireland |
+| Shimla         | Austria |
+| ?slahiye       | Japan   |
+| Edmundston     | Austria |
+| Satara         | Canada  |
+| Angers         | Canada  |
+| Siedlce        | Austria |
+| Chestermere    | Ireland |
+| Tirrases       | Canada  |
+| Zwickau        | Austria |
+| Belfast        | Ireland |
+| Rollegem       | Canada  |
+| Kraków         | Ireland |
+| Milena         | Japan   |
+| Cork           | Canada  |
+| Bozeman        | Japan   |
+| Pontevedra     | Japan   |
+| Bodmin         | Austria |
+| Baulers        | Canada  |
+| Alness         | Austria |
+| Springfield    | Canada  |
+| Abbeville      | Japan   |
+| San Francisco  | Canada  |
+| Lasnigo        | Ireland |
+| Terneuzen      | Ireland |
+| Raj Nandgaon   | Ireland |
+| Meridian       | Ireland |
+| Mabompr?       | Canada  |
+| Calmar         | Canada  |
+| Hamburg        | Austria |
+| Quesada        | Canada  |
+| Vienna         | Austria |
+| Berlin         | Japan   |
+| Hillsboro      | Canada  |
++----------------+---------+
+46 rows in set (0.00 sec)
